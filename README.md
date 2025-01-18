@@ -1,2 +1,2 @@
 # Astral
-All Trial websites made as examples.
+Repository for all Trial websites made as examples.
