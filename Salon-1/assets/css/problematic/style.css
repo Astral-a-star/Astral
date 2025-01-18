@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff7e67;
+}
+
+/* Header Navigation */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(166, 77, 121, 0.8); /* Semi-transparent tint */
+  color: white;
+  z-index: 10;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links li a:hover {
+  color: #ffe6f0;
+  text-decoration: underline;
+}
+
+.book-btn {
+  background-color: white;
+  color: #a64d79;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #ffe6f0;
+  color: #a64d79;
+}
+
+/* Carousel Styling */
+#image-carousel {
+  margin-top: 70px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  scroll-snap-align: center;
+}
+
+/* Category Sections */
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 250px;
+}
+
+.image-carousel {
+  flex: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.image-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Services Section */
+#services {
+  background-color: #fff;
+  text-align: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .carousel img {
+    max-width: 150px;
+    height: 100px;
+  }
+}

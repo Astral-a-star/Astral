@@ -1,0 +1,91 @@
+/* Carousel Styling */
+#image-carousel {
+  margin-top: 75px;
+  text-align: center;
+  overflow: auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  scroll-snap-align: center;
+}
+
+/* Category Sections */
+.category {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+}
+
+.image-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.image-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  width: calc(100% - 80px); /* Subtract the width of navigation buttons */
+  padding: 10px 0;
+}
+
+.image-wrapper img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-wrapper img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}

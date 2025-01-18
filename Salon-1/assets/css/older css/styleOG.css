@@ -1,0 +1,247 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff7e67;
+}
+
+/* Transparent Header */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(166, 77, 121, 0.8); /* Semi-transparent tint */
+  color: #fff;
+  z-index: 10;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex: 1; /* Allows the button to center relative to the navigation links */
+}
+
+.nav-links li {
+  padding: 5px 10px;
+}
+
+.nav-links li a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #ffe6f0;
+  text-decoration: underline;
+}
+
+/* Call-to-Action Button */
+.book-btn {
+  background-color: #fff;
+  color: #a64d79;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: auto; /* Adds spacing between the links and button */
+}
+
+.book-btn:hover {
+  background-color: #ffe6f0;
+  color: #a64d79;
+}
+
+/* Center Button Closer to Links */
+nav {
+  gap: 50px; /* Adds space between the nav links and button */
+}
+
+/* Parallax Hero Section */
+#hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Enables parallax effect */
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay to Darken Background */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text contrast */
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-container {
+  position: relative;
+  z-index: 2; /* Ensures text appears above the overlay */
+}
+
+.hero-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-container p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.hero-container .cta-btn {
+  background-color: #ff7e67;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.hero-container .cta-btn:hover {
+  background-color: #ff5131;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+}
+
+section h2 {
+  font-size: 32px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+section h3 {
+  font-size: 24px;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+section p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ff7e67;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.cta-btn:hover {
+  background-color: #ff5131;
+}
+
+/* Gallery Styling */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#gallery .gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* Testimonials Styling */
+#testimonials {
+  background-color: #fff;
+  padding: 50px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  font-weight: bold;
+  color: #ff7e67;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
